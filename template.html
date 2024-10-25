@@ -1,0 +1,10 @@
+
+<div class="app">
+  <h1>Desafío de Halloween</h1>
+  <p>Introduce el código secreto que descifraste del poema de Halloween:</p>
+  <input v-model="userCode" placeholder="Ingresa el código" />
+  <button @click="verifyCode">Verificar</button>
+  <p v-if="message">{{ message }}</p>
+  <p v-if="hint">{{ hint }}</p>
+  <button @click="giveHint" v-if="hintCount < 3">Obtener pista</button>
+</div>
